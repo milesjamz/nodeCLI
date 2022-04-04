@@ -1,7 +1,14 @@
 #! /usr/bin/env node
 var inquirer = require('inquirer');
+let today = new Date()
+let enzoDay = new Date('September 5, 2022')
+
+const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+let daysTillBday = Math.round((enzoDay - today) / _MS_PER_DAY)
 
 console.log('Hi, welcome to Daily Tracker');
+console.log(`There are ${daysTillBday} days left until Enzo's birthday`)
 /*
 -excercize minutes
 -applications
@@ -62,7 +69,7 @@ const questions = [
     filter: Number,
   }
 ]
-
+/*
 inquirer.prompt(questions).then((answers) => {
   console.log('\nTodays actions:');
   console.log(JSON.stringify(answers, null, '  '));
