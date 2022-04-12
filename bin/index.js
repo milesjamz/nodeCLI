@@ -73,10 +73,23 @@ const questions = [
   }
 ]
 
+let content = ''
+
 inquirer.prompt(questions).then((answers) => {
   console.log('\nTodays actions:');
   console.log(JSON.stringify(answers, null, '  '));
+  content = JSON.stringify(answers, null, '  ')
 });
+
+console.log(content)
+
+fs.appendFile('./bin/data.txt', content, err => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  //done!
+})
 
 /*
 const questions = [
