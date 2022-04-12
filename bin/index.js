@@ -11,6 +11,15 @@ console.clear()
 console.log('Hi, welcome to Daily Tracker');
 console.log(`There are ${daysTillBday} days left until Enzo's birthday`)
 
+fs.readFile('./bin/data.txt', 'utf8' , (err, data) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  console.log(data)
+})
+
+
 const questions = [
   {
     type: 'quantity',
@@ -63,7 +72,7 @@ const questions = [
     filter: Number,
   }
 ]
-/*
+
 inquirer.prompt(questions).then((answers) => {
   console.log('\nTodays actions:');
   console.log(JSON.stringify(answers, null, '  '));

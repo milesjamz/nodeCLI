@@ -1,3 +1,7 @@
 data = {
-    
+  "cardio": 49,
+  "weights": 20,
+  "jobs": 33,
+  "algos": 42,
+  "songs": 4
 }
