@@ -4,4 +4,10 @@ data = {
   "jobs": 33,
   "algos": 42,
   "songs": 4
+},{
+  "cardio": 1,
+  "weights": 2,
+  "jobs": 3,
+  "algos": 4,
+  "songs": 5
 }
